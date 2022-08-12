@@ -16,6 +16,6 @@ I know it's hard at the beginning. Believe me, I started without knowing a thing
 
 ## Index
 ### 1. [Canister](/canister)
-1. [Call or query other canisters' methods from your canister.](/canister/call-other-canister-methods)  
+1. [Call other canisters' methods from your canister.](/canister/call-other-canister-methods)  
   Note: This means call methods from the canister on IC network which is not yours. You can't do it in localhost.
 2. 
