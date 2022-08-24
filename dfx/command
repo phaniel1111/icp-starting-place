@@ -47,4 +47,6 @@ dfx wallet --network ic add-controller w7o7m-qfj72-vwd7l-tuetk-6jdmr-r6i5i-hb7ve
 
 dfx canister --network ic call auctm-iqaaa-aaaag-aaseq-cai mint  '(principal "gyuin-rin4e-bbny5-6zslu-oge7s-itg2h-usfzc-i5aey-v5v4k-o2noa-xqe", 4_000_000)'
 
-dfx canister --network ic update-settings --add-controller h6a6a-ffvll-4y3hv-2v7bh-mgso7-h4vsb-aldfe-amckr-zu3ts-e56xg-mae auctm-iqaaa-aaaag-aaseq-cai
+dfx canister --network ic update-settings --add-controller w7o7m-qfj72-vwd7l-tuetk-6jdmr-r6i5i-hb7ve-d5j5g-hrt4p-vym6e-4ae auctm-iqaaa-aaaag-aaseq-cai
+
+dfx canister --network ic call auctm-iqaaa-aaaag-aaseq-cai balanceOf  '(principal "ef2ca-fr66q-hrybr-wrdos-cmtsy-35t7v-35lta-lxpqb-2tk5q-2affc-vae")'
