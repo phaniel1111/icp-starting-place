@@ -1,0 +1,46 @@
+dfx canister --network=ic update-settings --add-controller 2vxsx-fae xx3ki-yiaaa-aaaam-qauiq-cai
+dfx canister --network=ic id xx3ki-yiaaa-aaaam-qauiq-cai
+
+
+dfx wallet --network=ic add-controller w7o7m-qfj72-vwd7l-tuetk-6jdmr-r6i5i-hb7ve-d5j5g-hrt4p-vym6e-4ae
+dfx wallet --network=ic controllers
+
+dfx wallet --network=ic remove-controller 2vxsx-fae
+dfx wallet --network=ic add-controller 2vxsx-fae
+
+dfx identity use anonymous
+dfx identity use default
+dfx identity --network=ic get-wallet
+dfx identity --network=ic list
+dfx identity --network=ic set-wallet xx3ki-yiaaa-aaaam-qauiq-cai
+
+dfx canister --network=ic stop xx3ki-yiaaa-aaaam-qauiq-cai
+dfx canister --network=ic start xx3ki-yiaaa-aaaam-qauiq-cai
+
+dfx wallet --network=ic upgrade
+dfx canister --network=ic info xx3ki-yiaaa-aaaam-qauiq-cai
+dfx canister --network=ic info wbqsd-nyaaa-aaaam-qaunq-cai
+dfx canister --network=ic info wgrux-aaaaa-aaaam-qauna-cai
+
+dfx identity --network ic deploy-wallet wbqsd-nyaaa-aaaam-qaunq-cai
+
+dfx wallet --network ic upgrade
+
+dfx canister --network ic call "xx3ki-yiaaa-aaaam-qauiq-cai" authorize '(principal "jwonl-vmhgm-ow4yc-yezzi-4u2jr-hvsio-clg7c-s3j3q-abrnx-kgizz-pae")'
+
+dfx canister --network ic call "wbqsd-nyaaa-aaaam-qaunq-cai" add-controller '(principal "w7o7m-qfj72-vwd7l-tuetk-6jdmr-r6i5i-hb7ve-d5j5g-hrt4p-vym6e-4ae")'
+
+dfx canister install --all --mode reinstall
+
+
+dfx canister --network=ic update-settings --add-controller wbqsd-nyaaa-aaaam-qaunq-cai wgrux-aaaaa-aaaam-qauna-cai
+
+dfx canister --network=ic status wbqsd-nyaaa-aaaam-qaunq-cai
+
+dfx wallet --network=ic balance
+
+dfx canister --network=ic status wbqsd-nyaaa-aaaam-qaunq-cai
+
+dfx deploy --network ic
+
+dfx wallet --network ic add-controller w7o7m-qfj72-vwd7l-tuetk-6jdmr-r6i5i-hb7ve-d5j5g-hrt4p-vym6e-4ae
